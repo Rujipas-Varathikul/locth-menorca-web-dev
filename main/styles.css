@@ -1,11 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 
 :root{
+    /* The syntax is --name-of-variable: value; */
     --white: #FFFFFA;
     --black: #131B23;
     --orange: #F05219;
     --secondary-clr: #119DA4;
     --tertiary-clr: #8F7F89;
+
+    --regular-font: 400;
+    --bold-font: 700;
+
+    --h1-fontsize: 4rem;
+    --h2-fontsize: 2rem;
+    --h3-fontsize: 1.25rem;
+    --regular-fontsize: 1rem;
+    --small-fontsize: 0.75rem;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -14,41 +29,101 @@ body{
 }
 
 .banner{
-    display: inline-flex;
-    padding: 16px 79px 16px 507px;
-    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    height: 10svh;
+
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 313px;
 
     position: sticky;
-    top: 0;
+    top: 0px;
+    z-index: 100;
 
     background-color: var(--white);
 }
 
-ul{
+.banner ul{
     display: flex;
+
     justify-content: center;
     align-items: center;
-    column-gap: 40px;
-    padding-inline-start: 0px;
+    gap: 2.5rem;
 
     list-style: none;
 }
 
-li a{
-    font-size: 16px;
-    font-weight: 700;
+.nav-item{
+    font-size: var(--regular-font);
+    font-weight: var(--bold-font);
+    text-decoration: none;
+
     color: var(--black);
 }
 
 .button-filled{
     display: flex;
-    padding: 10.5px 12px;
+    padding: 0.6rem 0.75rem;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    border-radius: 8px;
-    background: var(--orange);
+    border-radius: 0.5rem;
+
+    text-decoration: none;
+
+    background-color: var(--orange);
     color: var(--white);
+}
+
+.nav-btn{
+    position: absolute;
+    right: 1%;
+}
+
+
+#home{
+    width: 100%;
+    height: 90svh;
+
+    background-image: url(./images/home-background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+#home .masked{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    backdrop-filter: brightness(60%);
+}
+
+#home h1{
+    margin: 0px;
+
+    font-size: var(--h1-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--white);
+}
+
+#home p{
+    margin: 0.5rem;
+
+    text-align: center;
+
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--white);
+}
+
+#home .code-font{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5rem;
+    font-weight: var(--bold-font);
 }

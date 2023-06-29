@@ -9,30 +9,36 @@
               content="This wensite is a portfolio showcasing work and education experience of
               Vetit Kanjaras"
         />
-        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <header class="banner">
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
-                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a class="nav-item" href="#home">Home</a></li>
+                    <li><a class="nav-item" href="#skills">Skills</a></li>
+                    <li><a class="nav-item" href="#research">Research</a></li>
+                    <li><a class="nav-item" href="#experiences">Experiences</a></li>
+                    <li><a class="nav-item" href="#education">Education</a></li>
+                    <li><a class="nav-item" href="#achievements">Achievements</a></li>
                 </ul>
             </nav>
-            <a href="#" class="button-filled">Contact me</a>
+            <a href="#contact-me" class="button-filled nav-btn">Contact me</a>
         </header>
         <main>
-            <header>
-                <h1 id="home">Hi, My name is Vetit. ☺️</h1>
-                <p>Data Science Student</p>
-                <p>Coder</p>
-                <a href="#">Contact me</a>
+            <header id="home">
+                <div class="masked">
+                    <h1>Hi, My name is Vetit. ☺️</h1>
+                    <div>
+                        <p>Data Science Student</p>
+                        <p class="code-font">>.Coder</p>
+                    </div>
+                    <a href="#contact-me" class="button-filled">Contact me</a>
+                </div>
             </header>
-            <article>
-                <h2 id="about">Skills</h2>
-                <img src="images/web-dev.png" alt="dummy"/>
+            <article id="skills">
+                <h2>Skills</h2>
+                <img src="images/skill-dec.png" alt="dummy"/>
                 <div>
                     <article>
                         <img src="images/deep-learning.png" alt=""/>
@@ -66,7 +72,7 @@
                     </article>
                 </div>
             </article>
-            <article>
+            <article id="research">
                 <h2>Research</h2>
                 <p>OCTAve: 2D en face Optical Coherence Tomography Angiography Vessel Segmentation in 
                     Weakly-Supervised Learning with Locality Augmentation</p>
@@ -78,8 +84,8 @@
                 <img src="images/research.png"
                 alt="Part of the research paper showing 4 black and white pictures of vessels in the eye."/>
             </article>
-            <article>
-                <h2 id="experiences">Experiences</h2>
+            <article id="experiences">
+                <h2>Experiences</h2>
                 <p>machine learning engineer intern</p>
                 <p>Working as a Machine Learning Engineer and Developer in SKY ICT PCL. since 2021, 
                     mainly creating Computer Vision Models for Security Managements, Facility Managements 
@@ -91,7 +97,7 @@
                 alt="The traffic where each car has a rectangular boarder surrounded and the label say 
                     what the car's model is."/>
             </article>
-            <article>
+            <article id="education">
                 <h2>Education</h2>
                 <section>
                     <h3>Undergraduate</h3>
@@ -108,8 +114,8 @@
                     <a href="https://www.kvis.ac.th/Home_EN.aspx" target="_blank">Visit KVIS Website</a>
                 </section>
             </article>
-            <article>
-                <h2>Awards</h2>
+            <article id="achievements">
+                <h2>Achievements</h2>
                 <article>
                     <h3>wizmic 2014</h3>
                     <img src="images/wizmic.png" alt="dummy"/>
@@ -147,7 +153,7 @@
                         and became one of the ten finalists. </p>
                 </article>
             </article>
-            <article>
+            <article id="contact-me">
                 <h2>CONTACT ME</h2>
                 <form autocomplete="on">
                     <label for="name">Name</label>
