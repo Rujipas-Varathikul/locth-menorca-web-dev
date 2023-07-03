@@ -51,8 +51,6 @@ h2{
     display: flex;
     width: 100%;
     height: 10svh;
-
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 
@@ -85,13 +83,16 @@ h2{
     display: flex;
     width: fit-content;
     padding: 0.6rem 0.75rem;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
+    border-radius: var(--regular-border);
 
     text-decoration: none;
 
     background-color: var(--orange);
+    color: var(--white);
+}
+
+.button-filled:hover{
+    background-color: var(--black);
     color: var(--white);
 }
 
@@ -151,14 +152,6 @@ h2{
 
 /* Start of Skills Section */
 
-#skill-dec{
-    max-width: 49%;
-    object-fit: cover;
-    object-position: right;
-
-    border-radius: var(--regular-border);
-}
-
 .standard-section{
     display: flex;
     padding: 5rem 0px;
@@ -166,21 +159,27 @@ h2{
 }
 
 .section-content{
-    display: flex;
+    display: grid;
     width: 90%;
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
-.two-cols{
-    display: flex;
+.section-content h2{
+    grid-column: span 2;
+}
+
+#skill-dec{
     width: 100%;
-    justify-content: space-between;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+
+    border-radius: var(--regular-border);
 }
 
-.skill-list{
+#skill-list{
     display: flex;
-    width: 49%;
     flex-direction: column;
     gap: 24px;
 }
@@ -206,14 +205,8 @@ h2{
     background-color: var(--white);
 }
 
-.skill-content{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.skill-content h3{
-    margin: 0px;
+#skills h3{
+    margin: 0.25rem;
 
     font-size: var(--h2-fontsize);
     font-weight: var(--bold-font);
@@ -221,9 +214,9 @@ h2{
     color: var(--white);
 }
 
-.skill-content p{
+#skills p{
     max-width: 60ch;
-    margin: 0px;
+    margin: 0.25rem;
 
     font-size: var(--regular-fontsize);
     font-weight: var(--regular-font);
@@ -232,23 +225,18 @@ h2{
 }
 
 /* Start of Research Section */
+
 .section-clr-inverse{
     background-color: var(--black);
 }
 
 #research img{
-    width: 49%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.main-content{
-    display: flex;
-    width: 49%;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.main-content p{
+.section-content p{
     max-width: 60ch;
 
     font-size: var(--regular-fontsize);
@@ -257,7 +245,7 @@ h2{
     color: var(--white);
 }
 
-.main-content .title{
+.section-content .title{
     font-size: var(--h2-fontsize);
     font-weight: var(--bold-font);
 }
@@ -272,15 +260,15 @@ h2{
 /* Start of Experience Section*/
 
 #experiences img{
-    width: 49%;
+    width: 100%;
     object-fit: cover;
 }
 
-.main-content .inversed-text{
+#experiences .inversed-text{
     color: var(--black);
 }
 
-.main-content #sky-logo{
+#experiences #sky-logo{
     width: 5rem;
 }
 
