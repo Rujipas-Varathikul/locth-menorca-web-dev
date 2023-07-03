@@ -357,17 +357,25 @@ h2{
 /* Start of Achievements Section */
 
 #achievements .section-content{
-    align-items: center;
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
 }
 
 #achievements h2{
+    grid-column: span 6;
+
     font-size: var(--h1-fontsize);
     font-weight: var(--bold-font);
+    text-align: center;
 
     color: var(--black);
 }
 
 #achievements h3{
+    margin: 0px;
+
     font-size: var(--h2-fontsize);
     font-weight: var(--bold-font);
 
@@ -375,6 +383,7 @@ h2{
 }
 
 #achievements p{
+    margin: 0px;
     max-width: 60ch;
 
     font-size: var(--regular-fontsize);
@@ -403,23 +412,6 @@ h2{
     align-items: center;
     gap: 1rem;
 
-}
-
-#achievements h3{
-    margin: 0px;
-}
-
-#achievements p{
-    margin: 0px;
-}
-
-.achievements-group{
-    display: grid;
-
-    grid-template-columns: repeat(6, 1fr);
-    gap: 1.5rem;
-    /* grid-template-rows: 1fr 1fr; */
-    /* grid-auto-flow: dense; */
 }
 
 .col-span-3{
@@ -472,6 +464,7 @@ h2{
 
 .form-item input{
     height: 2.5rem;
+    padding: 0px 2ch;
 
     /* font-size: var(--h3-fontsize); */
 
@@ -481,6 +474,7 @@ h2{
 
 .form-item textarea{
     height: 8rem;
+    padding: 2ch;
     /* font-size: var(--h3-fontsize); */
 
     border-radius: var(--regular-border);
@@ -507,7 +501,9 @@ footer li{
 }
 
 footer .section-content{
+    display: flex;
     max-width: 70%;
+    flex-direction: column;
 }
 
 #footer-info{
