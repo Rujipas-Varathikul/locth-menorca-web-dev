@@ -17,6 +17,8 @@
     --h3-fontsize: 1.25rem;
     --regular-fontsize: 1rem;
     --small-fontsize: 0.75rem;
+
+    --regular-border: 0.5rem;
 }
 
 html{
@@ -26,6 +28,23 @@ html{
 body{
     margin: 0px;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-size: var(--h3-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--orange);
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .banner{
@@ -64,6 +83,7 @@ body{
 
 .button-filled{
     display: flex;
+    width: fit-content;
     padding: 0.6rem 0.75rem;
     justify-content: center;
     align-items: center;
@@ -80,6 +100,7 @@ body{
     right: 1%;
 }
 
+/* Start of Home Section */
 
 #home{
     width: 100%;
@@ -97,7 +118,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
 
     backdrop-filter: brightness(60%);
 }
@@ -126,4 +147,419 @@ body{
     font-family: 'Source Code Pro', monospace;
     font-size: 1.5rem;
     font-weight: var(--bold-font);
+}
+
+/* Start of Skills Section */
+
+#skill-dec{
+    max-width: 49%;
+    object-fit: cover;
+    object-position: right;
+
+    border-radius: var(--regular-border);
+}
+
+.standard-section{
+    display: flex;
+    padding: 5rem 0px;
+    justify-content: center;
+}
+
+.section-content{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.two-cols{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.skill-list{
+    display: flex;
+    width: 49%;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.skill-card{
+    display: flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 1.25rem;
+
+    border-radius: var(--regular-border);
+    
+    background-color: var(--black);
+}
+
+.skill-card img{
+    width: 3.75rem;
+    height: 3.75rem;
+    padding: 1.25rem;
+
+    border-radius: var(--regular-border);
+
+    background-color: var(--white);
+}
+
+.skill-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-content h3{
+    margin: 0px;
+
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--white);
+}
+
+.skill-content p{
+    max-width: 60ch;
+    margin: 0px;
+
+    font-size: var(--regular-fontsize);
+    font-weight: var(--regular-font);
+
+    color: var(--tertiary-clr);
+}
+
+/* Start of Research Section */
+.section-clr-inverse{
+    background-color: var(--black);
+}
+
+#research img{
+    width: 49%;
+    object-fit: cover;
+}
+
+.main-content{
+    display: flex;
+    width: 49%;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.main-content p{
+    max-width: 60ch;
+
+    font-size: var(--regular-fontsize);
+    font-weight: var(--regular-font);
+
+    color: var(--white);
+}
+
+.main-content .title{
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+}
+
+.inversed-btn{
+    border: 1px solid;
+
+    color: var(--orange);
+    background-color: var(--black);
+}
+
+/* Start of Experience Section*/
+
+#experiences img{
+    width: 49%;
+    object-fit: cover;
+}
+
+.main-content .inversed-text{
+    color: var(--black);
+}
+
+.main-content #sky-logo{
+    width: 5rem;
+}
+
+.white-back{
+    background-color: var(--white);
+}
+
+/* Start of Education */
+
+#education{
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0px;
+}
+
+#education h2{
+    margin: 40svh;
+    font-size: var(--h1-fontsize);
+
+    color: var(--white);
+}
+
+#education #undergrad{
+    display: flex;
+    width: 100%;
+    height: 100svh;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(./images/hs.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#undergrad div{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    position: relative;
+    top: 20%;
+}
+
+#education p{
+    margin: 0px;
+
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--white);
+}
+
+#education .edu-title{
+    max-width: 20ch;
+
+    font-size: 4rem;
+}
+
+#education #high-sch{
+    display: flex;
+    width: 100%;
+    height: 100svh;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(./images/kvis.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#high-sch div{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+
+    position: relative;
+    right: 10%;
+}
+
+/* Start of Achievements Section */
+
+#achievements .section-content{
+    align-items: center;
+}
+
+#achievements h2{
+    font-size: var(--h1-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--black);
+}
+
+#achievements h3{
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--black);
+}
+
+#achievements p{
+    max-width: 60ch;
+
+    font-size: var(--regular-fontsize);
+    font-weight: var(--regular-font);
+
+    color: var(--black);
+}
+
+#achievements article{
+    border-radius: var(--regular-border);
+
+    box-shadow: 5px 6px 15px 2px rgba(0, 0, 0, 0.25);
+}
+
+#achievements img{
+    width: 100%;
+
+    border-radius: var(--regular-border) var(--regular-border) 0px 0px;
+}
+
+#achievements main{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin: 0px 0px 2rem 0px;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+#achievements h3{
+    margin: 0px;
+}
+
+#achievements p{
+    margin: 0px;
+}
+
+.achievements-group{
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid-auto-flow: dense; */
+}
+
+.col-span-3{
+    grid-column: span 3;
+}
+
+.col-span-2{
+    grid-column: span 2;
+}
+
+/* Start of Contact Me Section */
+
+#contact-me{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(./images/contact-bg.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#contact-me h2{
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+
+    color: var(--white);
+}
+
+#contact-me form{
+    display: grid;
+    width: 50%;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#contact-me label{
+    font-size: var(--regular-fontsize);
+    font-weight: var(--regular-font);
+
+    color: var(--white);
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-item input{
+    height: 2.5rem;
+
+    /* font-size: var(--h3-fontsize); */
+
+    border-radius: var(--regular-border);
+    border-width: 0px;
+}
+
+.form-item textarea{
+    height: 8rem;
+    /* font-size: var(--h3-fontsize); */
+
+    border-radius: var(--regular-border);
+    border-width: 0px;
+}
+
+#contact-me button{
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    font-weight: var(--bold-font);
+
+    border-width: 0px;
+}
+
+/* Start of Footer */
+
+footer p{
+    color: var(--white);
+}
+
+footer li{
+    color: var(--tertiary-clr);
+}
+
+footer .section-content{
+    max-width: 70%;
+}
+
+#footer-info{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#footer-info img{
+    width: 6rem;
+    height: 6rem;
+
+    border-radius: 50%;
+}
+
+#footer-info p{
+    margin: 0.5rem 0px;
+    font-size: var(--h2-fontsize);
+    font-weight: var(--bold-font);
+}
+
+#footer-info ul{
+    padding: 0px;
+
+    list-style: none;
+}
+
+#contact-channels{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.channel{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.channel img{
+    width: 1.5rem;
+    height: 1.5rem;
 }
